@@ -1,5 +1,134 @@
-/*
+@media print {
+    .tm-sidebar, #about, .heading, .blocks, #ideas, .img-fluid, #contact {
+        display: none;
+    }
+    .tm-banner {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .tm-banner .tm-banner-inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .tm-content-box{
+        margin: 0;
+    }
+    .tm-content-box.flex-2-col {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .tm-content-box.flex-2-col:first-child {
+        width: 650px;
+    }
+    .tm-content-box.flex-2-col div+div {
+        width: 260px;
+    }
+}
+@media screen {
+    .tm-content-box.flex-2-col:first-child {
+        /*        width: 80%;*/
+    }
 
-write your code here
-
-*/
+    .tm-content-box.flex-2-col div+div {
+        /*        width: 100%;    */
+    }
+}
+.tm-content-box.flex-2-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-container .box-bg:hover h2 {
+    color: #FFFFFF;
+    background-color: #87CEFA;
+}
+p:first-letter {
+    color: #87CEFA;
+    font-size: 30px;
+}
+.tm-content-box {
+    box-shadow: 0 0 10px #808080;
+}
+.tm-banner {
+    background-color: #F5F5F5;
+}
+.tm-banner-inner {
+    background-color:#FFFFFF;
+}
+section {
+    position: relative;
+}
+section::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 200px 0 0;
+    border-color: #87CEFA transparent transparent transparent;
+}
+.carousel-inner h2.tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+h2+p {
+    font-style: italic;
+}
+p {
+    text-indent: 2em;
+}
+.tm-banner p, .box-work p {
+    text-indent: 0em;
+}
+section.heading a {
+    color: black;
+}
+section.heading a:hover {
+    color: #87CEFA;
+    text-decoration-style: double;
+}
+section.heading a:visited {
+    text-decoration: underline;
+}
+section.heading .text::after {
+    content: "New";
+    font-size: 10px;
+    color: #FF0000;
+    vertical-align: top;
+    display: inline-block;
+}
+.blocks {
+    background-color: #F5F5F5;
+    box-shadow: 0 0 10px #808080;
+}
+.blocks .tm-content-box {
+    box-shadow: none;
+}
+.box-work {
+    padding: 10px;
+}
+.box-work:nth-child(even) {
+    background-color: #F5F5F5;
+}
+.box-work p:first-letter {
+    color: #000000;
+}
+.mandatory-field:after {
+    content:"*";
+    font-weight: bold;
+    color: #FF0000;
+    display:inline;
+}
+.submit-btn {
+    border-radius: 0rem;
+    float: right;
+    color: #87CEFA;
+    background-color: #FFFFFF;
+    border-color: #87CEFA;
+    padding: 15px 60px;
+    font-size: x-large;
+}
+.submit-btn:hover {
+    color: #FFFFFF;
+    background-color: #87CEFA;
+    border-color: #87CEFA;
+}

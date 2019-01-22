@@ -24,15 +24,7 @@
         width: 260px;
     }
 }
-@media screen {
-    .tm-content-box.flex-2-col:first-child {
-        /*        width: 80%;*/
-    }
 
-    .tm-content-box.flex-2-col div+div {
-        /*        width: 100%;    */
-    }
-}
 .tm-content-box.flex-2-col {
     display: flex;
     align-items: center;

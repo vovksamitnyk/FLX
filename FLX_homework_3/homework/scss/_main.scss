@@ -1,0 +1,197 @@
+* {
+    font-family: $fontFamily;
+}
+body {
+    background: url($headBackground) no-repeat;
+    background-position-y: -60px;
+    margin: 0px;
+}
+
+main {
+    margin-top: 312px;
+    width: 680px;
+    padding: 0px 169px;
+    background-color: $mainColor;
+}
+.logo {
+    display: block;
+    justify-content: flex-start;
+    width: max-content;
+    img {
+        width: 160px;
+        margin-top: 1px;
+        margin-left: 2px;
+    }
+}
+.top-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    text-align: center;
+    section {
+        margin-top: 177px;
+        padding-left: 18px;
+        h1 {
+            color: $navColor;
+            margin-bottom: 18px;
+        }
+        a {
+            color: white;
+            text-transform: uppercase;
+            font-size: initial;
+        }
+    }
+}
+nav {
+    width: 50%;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 64px;
+    margin-top: 8px;
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: $navColor;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-left: 62px;
+        &:first-child {
+            margin-right: 5px;
+        }
+    }
+}
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 14px 34px;
+    input {
+        padding: 6px 4px;
+        font-size: x-small;
+        font-weight: bold;
+    }
+}
+section.post-list {
+    margin: -14px -8px;
+    h1 {
+        text-align: end;
+        margin: 0px;
+    }
+    article img {
+        height: 198px;
+    }
+}
+h1, h2, h3, h4 {
+    font-size: initial;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.post p, .about p {
+    font-size: 11px;
+    margin-top: -8px;
+    line-height: 16px;
+}
+.post-description {
+    color: $postDescriptionColor;
+    font-size: 8px;
+    border-bottom: 1px solid #8ca0aa;
+    padding: 8px 0px 8px 0px;
+}
+
+h3 {
+    color: $hColor;
+    text-transform: uppercase;
+}
+
+.btn {
+    width: 150px;
+    height: 30px;
+    background: $bColor;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 44px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+}
+article {
+    background-color: $articleColor;
+    margin: 20px;
+    padding: 4px;
+    display: flex;
+    width: 661px;
+}
+.post {
+    padding: 0px 5px;
+    h3 {
+        font-size: 11px;
+        font-weight: 800;
+        margin-top: 3px;
+    }
+}
+.about {
+    padding-top: 44px;
+    padding-left: 14px;
+    p {
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+    img {
+        height: 160px;
+    }
+    h1 {
+        text-align: end;
+        margin: 0px;
+    }
+}
+article .btn {
+    float: right;
+}
+.contact-form {
+    margin-top: 42px;
+    h1, h4 {
+        text-align: end;
+        margin: 0px;
+    }
+    h4 {
+        font-size: 11px;
+        font-weight: bold; 
+    }
+}
+form fieldset {
+    border: none; 
+}
+form fieldset label, form fieldset input, form fieldset textarea {
+    display:     block; 
+}
+form fieldset label {
+    text-align: right;
+    color: $hColor;
+    font-size: 11px;
+    margin: 15px -10px 3px 0px;
+}
+form fieldset.col {
+    display: inline-block;
+    width: 45%;
+}
+form fieldset.col input {
+    width: 105%;
+    height: 28px;
+}
+form input.btn-submit {
+    float: right;
+    width: 140px;
+}
+footer {
+    margin: 30px 11px;
+    font-size: 9px;
+}
+form label.required {
+    position: relative;
+}
+form label.required::after {
+    content: "*";
+}

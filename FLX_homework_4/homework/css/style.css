@@ -1,0 +1,218 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+p {
+    font-size: 75%;
+}
+
+
+#header-b, #header-s, #header-pp {
+    text-align: center;
+}
+#header-pp, {
+    font-size: 350%;
+}
+#header-s {
+    font-size: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+#ampersand {
+    font-size: 200%;
+}
+
+body {
+    font-family: "Open Sans";
+    font
+    margin: 0;
+    padding: 0;
+    min-width: 900px;
+    background-color: beige;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    color: white
+}
+.hdr-top {
+    padding: 0 0 0 30px;
+    background-color: burlywood;
+    display: flex;
+}
+.hdr-top-logo {
+    flex: auto;
+    display: flex;
+    justify-content: flex-start;
+    background-color: cadetblue;
+}
+.hdr-top-nav {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+}
+.hdr-top-nav .nav {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    background-color: cadetblue;
+    padding: 0 20px;
+}
+.nav-a {
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+}
+.nav-a:hover {
+    color: burlywood;
+}
+
+/*
+.hdr-middle {
+display: block;
+align-items: center;
+}
+*/
+
+.hdr-bottom {
+    padding: 40px 0;
+    background-color: cadetblue;
+}
+
+.buttonssss {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonssss .button {
+    width: 150px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background: none;
+}
+
+
+
+
+main {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.bdy-triangle {
+    width: auto;
+    height: 150px;
+    border: 1px solid red;
+}
+.bdy-under-triangle {
+    font-size: 150%;
+    width: auto;
+    height: auto;
+    border: 1px solid green;
+}
+.bdy-top {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border: 1px solid green;
+}
+.bdy-top-foto {
+    display: flex;
+    align-items: center;
+    min-width: 50%;
+    padding: 20px;
+    border: 1px solid red;
+}
+.bdy-top-texts {
+    padding: 20px;
+    border: 1px solid red;
+}
+.bdy-top-texts p {
+    text-align: center;
+}
+
+.bdy-bottom {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nm {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+}
+.button-bottom {
+    display: flex;
+    justify-content: center;
+}
+.explore {
+    width: 100%;
+    height: 30px;
+    background: #097774;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore:hover {
+    background: none;
+    border: 1px solid #097774;
+    color: #097774;
+}
+
+.subscribe-newsletters {
+    border: 1px solid green;
+    padding: 10px;
+}
+.rightside {
+    display: flex-end;
+    text-align: right;
+    margin: 5px 20px 20px 5px;
+}
+#sn {
+    margin: 0 0 0 20px;
+    padding: 5px;
+}
+.button-subscribe {
+    margin: 0 0 0 10px;
+    width: inherit;
+    height: 30px;
+    background: #097774;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    width: auto;
+    height: auto;
+    background-color: bisque;
+}

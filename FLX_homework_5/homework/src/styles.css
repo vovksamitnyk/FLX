@@ -23,7 +23,6 @@ body {
 }
 
 header p {
-    /*    border: 1px solid red;*/
     color: white;
 }
 .header {
@@ -35,14 +34,13 @@ header p {
 .hdr-left {
     font-size: 200%;
     font-weight: 200;
-    /*    border: 1px solid;*/
 }
 .hdr-right {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*    border: 1px solid;*/
+    color: white;
 }
 #logo {
     color: #d12767;
@@ -56,10 +54,8 @@ header p {
 .nav-a {
     height: 100%;
     width: 25%;
-    /*    padding: 0 20px;*/
     color: white;
     text-decoration: none;
-    /*    border: 1px solid;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +68,6 @@ main {
     display: flex;
     width: auto;
     height: auto;
-    /*    border: 1px solid green;*/
 }
 .post, .blog-b {
     display: flex;
@@ -100,7 +95,6 @@ p {
     font-size: 60%;
     font-weight: 300;
     line-height: 1.6;
-
 }
 
 img {
@@ -111,7 +105,7 @@ img {
 .post {
     display: flex;
 }
-.post-foto {
+.post-photo {
     flex: 50%;
 }
 .post-text {
@@ -137,19 +131,16 @@ img {
     color: hsla(100, 100%, 100%, 0.3);
 }
 
-
-
 aside {
     display: block;
     margin-left: 2%;
     width: 60%;
-    /*    border: 1px solid white;*/
 }
 .news {
     display: block;
     margin: 0 0 8% 0;
 }
-.news-foto {
+.news-photo {
     margin: 0;
     padding: 0;
     background-color: white;
@@ -174,24 +165,25 @@ aside {
 .post-no-photo .post-text-date {
     margin: 1.5%;
 }
+
 footer {
     display: flex;
     padding: 1% 3%;
     margin: 2% 0 0 0;
     background-color: #162b4d;
-    /*    border: 1px solid white;*/
     justify-content: space-between;
 }
 footer p {
     color: hsla(100, 100%, 100%, 0.2);
 }
+
 @media all and (min-width: 769px) {
     /* desktop */
     body {
         min-width: 769px;
         max-width: 900px;
     }
-    .hdr-right button {
+    .hdr-right #icon-menu {
         display: none;
     }
     .post {
@@ -225,18 +217,14 @@ footer p {
     }
     .header .hdr-right {
         width: 100%;
-        /*
-        display: none;
-        width: 0;
-        */
     }
     .header .hdr-right nav{
-
         display: none;
-
     }
-    .header .hdr-right button {
+    .header .hdr-right #icon-menu {
         display: flex;
+        margin: 5% 0 0 0;
+        font-size: 150%;
     }
     .post,
     .post .post-text .blog-b {
@@ -244,6 +232,17 @@ footer p {
     }
     .post-text-date {
         text-align: center;
+    }
+    footer {
+        display: block;
+        margin: 2% 0 0 0;
+        text-align: center;
+    }
+    #copyright {
+        margin-bottom: 0;
+    }
+    #design-and-coding {
+        margin-top: 0;
     }
 
 }
@@ -258,9 +257,11 @@ footer p {
     main {
         flex-direction: column;
     }
-
     aside {
         width: 100%;
+        margin: 0;
+    }
+    .news {
         margin: 0;
     }
 }

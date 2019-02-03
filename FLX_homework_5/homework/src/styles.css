@@ -1,0 +1,266 @@
+body {
+    font-family: roboto;
+    background-color: #0b192f;
+}
+.post-1 {
+    background: #B71757;
+}
+.post-2 {
+    background: #0D7E71;
+}
+.post-3 {
+    background: #b1660e;
+}
+.post-4 {
+    background: #d12767;
+}
+.post-5 {
+    background: #2d95bb;
+}
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+
+header p {
+    /*    border: 1px solid red;*/
+    color: white;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: #162b4d;
+}
+.hdr-left {
+    font-size: 200%;
+    font-weight: 200;
+    /*    border: 1px solid;*/
+}
+.hdr-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    border: 1px solid;*/
+}
+#logo {
+    color: #d12767;
+}
+.nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-a {
+    height: 100%;
+    width: 25%;
+    /*    padding: 0 20px;*/
+    color: white;
+    text-decoration: none;
+    /*    border: 1px solid;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-a:hover {
+    background-color: #3f567b;
+}
+main {
+    margin-top: 2%;
+    display: flex;
+    width: auto;
+    height: auto;
+    /*    border: 1px solid green;*/
+}
+.post, .blog-b {
+    display: flex;
+}
+.blog-a, .blog-b {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+.blog-a:hover img, .blog-b:hover {
+    opacity: 0.5;
+}
+
+.blog-list {
+    color: white;
+}
+h2 {
+    margin-top: 0;
+    font-size: 180%;
+    font-weight: 200;
+}
+p {
+    color: hsla(100, 100%, 100%, 0.5);
+    font-size: 60%;
+    font-weight: 300;
+    line-height: 1.6;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.post {
+    display: flex;
+}
+.post-foto {
+    flex: 50%;
+}
+.post-text {
+    flex: 50%;
+    display: flex;
+}
+.post-text-text {
+    width: 90%;
+    padding: 8%;
+}
+.post-text-date {
+    margin: 3%;
+    color: hsla(100, 100%, 100%, 0.3);
+    font-weight: 200;
+}
+.post-text-date h2 {
+    margin: 0;
+}
+.post-text-date p {
+    margin: 0;
+    font-size: 100%;
+    font-weight: 200;
+    color: hsla(100, 100%, 100%, 0.3);
+}
+
+
+
+aside {
+    display: block;
+    margin-left: 2%;
+    width: 60%;
+    /*    border: 1px solid white;*/
+}
+.news {
+    display: block;
+    margin: 0 0 8% 0;
+}
+.news-foto {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.news-text {
+    margin: 0;
+    padding: 10%;
+    background-color: white;
+}
+.news-text h3 {
+    color: black;
+    margin-top: 0;
+    font-weight: 300;
+}
+.news-text p {
+    color: gray;
+
+}
+.post-no-photo .post-text-text {
+    padding: 4%;
+}
+.post-no-photo .post-text-date {
+    margin: 1.5%;
+}
+footer {
+    display: flex;
+    padding: 1% 3%;
+    margin: 2% 0 0 0;
+    background-color: #162b4d;
+    /*    border: 1px solid white;*/
+    justify-content: space-between;
+}
+footer p {
+    color: hsla(100, 100%, 100%, 0.2);
+}
+@media all and (min-width: 769px) {
+    /* desktop */
+    body {
+        min-width: 769px;
+        max-width: 900px;
+    }
+    .hdr-right button {
+        display: none;
+    }
+    .post {
+        flex-direction: row;
+    }
+    .post:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .post:nth-child(even) .blog-b {
+        flex-direction: row-reverse;
+    }
+    .post:nth-child(even) .post-text .blog-b {
+        text-align: right;
+    }
+
+}
+@media all and (max-width: 768px) {
+    /* tab */
+    body {
+        width: 97%;
+        min-width: 481px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .header {
+        flex-direction: column-reverse;
+    }
+    .header .hdr-left {
+        text-align: center;
+        font-size: 50px;
+    }
+    .header .hdr-right {
+        width: 100%;
+        /*
+        display: none;
+        width: 0;
+        */
+    }
+    .header .hdr-right nav{
+
+        display: none;
+
+    }
+    .header .hdr-right button {
+        display: flex;
+    }
+    .post,
+    .post .post-text .blog-b {
+        flex-direction: column;
+    }
+    .post-text-date {
+        text-align: center;
+    }
+
+}
+@media all and (max-width: 480px) {
+    /* mobile */
+    body {
+        width: 97%;
+        min-width: 320px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin: 0;
+    }
+}

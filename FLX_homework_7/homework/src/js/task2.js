@@ -73,6 +73,5 @@ if (start) {
         game = confirm("Do you want play again?");
 
     }
-
 }
 alert("You did not become a millionaire, but can.");

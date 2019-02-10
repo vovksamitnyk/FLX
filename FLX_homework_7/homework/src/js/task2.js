@@ -1,4 +1,4 @@
-let start = confirm("START\nDo you want to play a game?");
+let start = confirm("Do you want to play a game?");
 
 if (start) {
     let game = true;

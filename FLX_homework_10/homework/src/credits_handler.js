@@ -53,7 +53,7 @@ class UserAccount {
         this.cards = [];
     }
     addCard() {
-        let amountOfCardsOfUser = 0;
+        let amountOfCardsOfUser = this.cards.length;
         let maximumAmountOfCardsOfUser = 3;
         if (amountOfCardsOfUser <= maximumAmountOfCardsOfUser) {
             let x = this.cards.length + 1;

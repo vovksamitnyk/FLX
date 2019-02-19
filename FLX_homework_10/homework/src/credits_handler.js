@@ -3,17 +3,19 @@ function UserCard(x) {
     let transactionLimit = 100;
     let historyLogs = [];
     let key = x;
+    const tax = 0.005;
 
     this.putCredits = function(amountOfMoney) {
-        historyLogs.push({operationType: 'Reseived credits', credits: amountOfMoney, operationTime: new Date()});
+        historyLogs.push({operationType: 'Received credits',
+                          credits: amountOfMoney, operationTime: new Date().toLocaleString()});
         balance += amountOfMoney;
     }
     this.takeCredits = function(amountOfMoney) {
-        if (transactionLimit >= amountOfMoney) {
+        if (transactionLimit >= amountOfMoney && balance >= amountOfMoney) {
             historyLogs.push({
                 operationType: 'Withdrawal of credits',
                 credits: amountOfMoney,
-                operationTime: new Date()
+                operationTime: new Date().toLocaleString()
             });
             balance -= amountOfMoney;
         } else {
@@ -21,13 +23,13 @@ function UserCard(x) {
         }
     }
     this.setTransactionLimit = function(limit) {
-        historyLogs.push({operationType: 'Transaction limit change', credits: limit, operationTime: new Date()})
+        historyLogs.push({operationType: 'Transaction limit change',
+                          credits: limit, operationTime: new Date().toLocaleString()})
         transactionLimit = limit;
     }
     this.transferCredits = function(amountOfMoney, recipientCard) {
-        if (transactionLimit >= amountOfMoney) {
-            let tax = 0.005;
             let taxed = amountOfMoney * tax + amountOfMoney;
+        if (transactionLimit >= amountOfMoney && balance >= taxed) {
             this.takeCredits(taxed);
             recipientCard.putCredits(amountOfMoney);
         } else {
@@ -73,19 +75,19 @@ let user = new UserAccount('Bob');
 user.addCard()
 user.addCard()
 
-const numKey1 = 1;
-const numKey2 = 2;
+const cardOneKey = 1;
+const cardTwoKey = 2;
 
-let card1 = user.getCardByKey(numKey1);
-let card2 = user.getCardByKey(numKey2);
+let card1 = user.getCardByKey(cardOneKey);
+let card2 = user.getCardByKey(cardTwoKey);
 
-let temporaryNumber500 = 500;
-let temporaryNumber800 = 800;
-let temporaryNumber300 = 300;
-let temporaryNumber50 = 50;
+let cardOnePut = 500;
+let cardOneLimit = 800;
+let transfer = 300;
+let cardTwoTake = 50;
 
-card1.putCredits(temporaryNumber500);
-card1.setTransactionLimit(temporaryNumber800);
-card1.transferCredits(temporaryNumber300, card2);
+card1.putCredits(cardOnePut);
+card1.setTransactionLimit(cardOneLimit);
+card1.transferCredits(transfer, card2);
 
-card2.takeCredits(temporaryNumber50);
+card2.takeCredits(cardTwoTake);

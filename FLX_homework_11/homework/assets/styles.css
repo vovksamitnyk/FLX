@@ -1,0 +1,40 @@
+/* Your styles goes here */
+/*
+body {
+    display: block;
+    align-content: space-between;
+}
+*/
+
+.material-icons {
+    cursor: pointer;
+}
+#button-plus:hover {
+    color: green;
+}
+#button-plus.disabled:hover {
+    color: darkgrey;
+}
+#button-plus.disabled {
+    color: darkgrey;
+    cursor: default;
+}
+.material-icons.check_box_outline_blank:hover {
+    color: darkgrey;
+}
+.material-icons.delete {
+    float: right;
+}
+.material-icons.delete:hover {
+    color: red;
+}
+.list_item {
+    width: 100%;
+}
+.list_item input {
+    /*   float: left;*/
+}
+div #cat_list {
+    border: 1px solid red;
+    height: 300px;
+}

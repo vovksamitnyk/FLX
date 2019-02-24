@@ -45,11 +45,7 @@ function createNote() {
             notification.innerHTML = 'Maximum item per list are created.';
             disableAdd();
             document.getElementById('поле_вводу').disabled = 'disabled';
-            /* тут вписати деактивацію кнопки "плюс"!
-            ======================================
-            */
         }
-        //console.log(counterNotes + " - показник лічильника ізсередини додаючої ф-ції");
     }
 }
 
@@ -71,14 +67,10 @@ function disableAdd() {
 function deleteNote () {
     this.parentNode.parentNode.removeChild(this.parentNode);
     counterNotes--;
-    //console.log(counterNotes + " - показник лічильника після смітничка");
     if (counterNotes < allowedNumberOfNotes) {
         let notification = document.getElementById('notification');
         notification.innerHTML = '';
-        enableAdd();
         document.getElementById('поле_вводу').disabled = '';
-
-        // тут має бути активація кнопки "плюс";
     }
 }
 

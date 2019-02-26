@@ -16,7 +16,7 @@ document.getElementById('button-save').onclick = createNote;
 document.getElementById('button-save-changes').onclick = f6;
 
 function locationHashChanged() {
-    const number0 = 0;
+    const zero = 0;
     if (location.hash === '#/add') {
         document.getElementById('page1').style.display = 'none';
         document.getElementById('page2').style.display = '';
@@ -25,7 +25,7 @@ function locationHashChanged() {
         document.getElementById('page1').style.display = '';
         document.getElementById('page2').style.display = 'none';
         document.getElementById('page3').style.display = 'none';
-    } else if (location.hash.indexOf('#/change/') === number0) {
+    } else if (location.hash.indexOf('#/change/') === zero) {
         document.getElementById('textarea3').value = localStorage.getItem(location.hash.split('#/change/')[1]);
         document.getElementById('page1').style.display = 'none';
         document.getElementById('page2').style.display = 'none';
@@ -43,8 +43,8 @@ function drawCheckBox () {
 function createNote() {
         let getNewNote = document.getElementById('textarea2');
         let newNote = getNewNote.value;
-        const number = 10000000;
-        let id = Math.floor(Math.random() * number);
+        const maxId = 10000000;
+        let id = Math.floor(Math.random() * maxId);
         localStorage.setItem(id, newNote);
         newDiv = document.createElement('div');
         newDiv.className = 'list_item';
@@ -73,6 +73,7 @@ function createNote() {
 
 
 function deleteNote () {
+    localStorage.removeItem(this.parentNode.id);
     this.parentNode.parentNode.removeChild(this.parentNode);
 }
 

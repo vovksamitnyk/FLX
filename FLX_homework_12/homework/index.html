@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 12 - Simple TODO List</title>
+        <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+        <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+    <body>
+
+        <div id="root">
+            <header>
+                <h1>Simple TODO application</h1>
+                <p id="notification"></p>
+            </header>
+
+            <div id="page1">
+                <h4>ГОЛОВНА СТОРІНКА</h4>
+                <a href="#/add">ADD-NEW-TASK</a>
+                <hr>
+                <div id="cat_list">ТУТ БУДЕ СПИСОК ЩЕ НЕ ГОТОВИХ СПРАВ</div>
+                <hr>
+                <div>ТУТ БУДЕ СПИСОК ГОТОВИХ СПРАВ</div>
+                <h1>ЦЯ ДОМАШКА НЕ ЗАКІНЧЕНА...</h1>
+            </div>
+
+            <div id="page2" style="display: none">
+                <h4>2-га СТОРІНКА (СТВОРЮЄ записи)</h4>
+                <textarea id="textarea2" cols="60" rows="5" placeholder="Add New Action"></textarea>
+                <a id="button-save" href="#/">SAVE</a>
+                <a href="#/">CANCEL</a>
+            </div>
+
+            <div id="page3" style="display: none">
+                <h4>3-тя СТОРІНКА (ЗМІНЮЄ записи)</h4>
+                <textarea id="textarea3" cols="60" rows="5"></textarea>
+                <a id="button-save-changes" href="#/">SAVE-CHANGES</a>
+                <a href="#/">CANCEL</a>
+            </div>
+
+        </div>
+
+        <script src="./src/app.js"></script>
+    </body>
+</html>
